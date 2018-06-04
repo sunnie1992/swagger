@@ -1,0 +1,52 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "A simple API to learn how to write OpenAPI Specification",
+    "version": "1.0.0",
+    "title": "Simple API"
+  },
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/sunnie1992/supplier-admin/1.0.0",
+  "schemes": ["https"],
+  "paths": {
+    "/persons": {
+      "get": {
+        "summary": "Gets some persons",
+        "description": "Returns a list containing all persons.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of Person",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/inline_response_200"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "inline_response_200": {
+      "required": ["username"],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "example": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "username": "username"
+      }
+    }
+  }
+}
