@@ -34,9 +34,9 @@
     "/supplier" : {
       "get" : {
         "tags" : [ "商品" ],
-        "summary" : "获取供应商信息",
-        "description" : "获取商品详情情况",
-        "operationId" : "findPetsByStatus",
+        "summary" : "供应商信息",
+        "description" : "获取供应商信息",
+        "operationId" : "getSupplierInfo",
         "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
