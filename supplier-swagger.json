@@ -31,7 +31,7 @@
     }
   } ],
   "paths" : {
-    "/mall/order" : {
+    "/finance/list" : {
       "post" : {
         "tags" : [ "订单" ],
         "summary" : "提交订单",
