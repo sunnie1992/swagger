@@ -133,6 +133,38 @@
           "petstore_auth" : [ "write:pets", "read:pets" ]
         } ]
       }
+    },
+    "/mall/finance" : {
+      "get" : {
+        "tags" : [ "资金" ],
+        "summary" : "提交订单",
+        "description" : "提交订单信息到系统",
+        "operationId" : "create_order",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "订单信息",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/NewOrder"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "操作完成.",
+            "schema" : {
+              "$ref" : "#/definitions/OrderApiResponse"
+            }
+          },
+          "400" : {
+            "description" : "订单错误.错误原因."
+          }
+        },
+        "security" : [ {
+          "petstore_auth" : [ "write:pets", "read:pets" ]
+        } ]
+      }
     }
   },
   "securityDefinitions" : {
