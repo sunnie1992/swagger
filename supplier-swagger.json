@@ -15,7 +15,7 @@
   },
   "tags" : [ {
     "name" : "供应商",
-    "description" : "提供商品列表.商品详细信息"
+    "description" : "供应商信息"
   }, {
     "name" : "订单",
     "description" : "商品订单."
@@ -40,7 +40,7 @@
         "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "success",
             "schema" : {
               "$ref" : "#/definitions/SupplierInfo"
             }
