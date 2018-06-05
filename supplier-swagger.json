@@ -14,7 +14,7 @@
     }
   },
   "tags" : [ {
-    "name" : "商品",
+    "name" : "供应商",
     "description" : "提供商品列表.商品详细信息"
   }, {
     "name" : "订单",
@@ -33,7 +33,7 @@
   "paths" : {
     "/supplier" : {
       "get" : {
-        "tags" : [ "商品" ],
+        "tags" : [ "供应商" ],
         "summary" : "供应商信息",
         "description" : "获取供应商信息",
         "operationId" : "getSupplierInfo",
