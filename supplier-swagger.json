@@ -31,43 +31,6 @@
     }
   } ],
   "paths" : {
-    "/mall/products/{offset}/{limit}" : {
-      "get" : {
-        "tags" : [ "商品" ],
-        "summary" : "商品列表.",
-        "operationId" : "addPet",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "pageSize",
-          "in" : "query",
-          "description" : "Number of persons returned",
-          "type" : "integer"
-        }, {
-          "name" : "pageNumber",
-          "in" : "query",
-          "description" : "Page number",
-          "type" : "integer"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "成功返回",
-            "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/ProductList"
-              }
-            }
-          },
-          "404" : {
-            "description" : "用户未认证"
-          }
-        },
-        "security" : [ {
-          "petstore_auth" : [ "write:pets", "read:pets" ]
-        } ]
-      }
-    },
     "/mall/product/detail/{productid}" : {
       "get" : {
         "tags" : [ "商品" ],
@@ -131,7 +94,7 @@
       }
     },
     "/mall/finance" : {
-      "get" : {
+      "post" : {
         "tags" : [ "资金" ],
         "summary" : "资金列表",
         "description" : "获取资金列表",
@@ -140,11 +103,13 @@
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
-          "description" : "订",
+          "description" : "资金",
           "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/NewOrder"
-          }
+          "schema" : [ {
+            "$ref" : "#/parameters/pageSize"
+          }, {
+            "$ref" : "#/parameters/pageNumber"
+          } ]
         } ],
         "responses" : {
           "200" : {
@@ -547,6 +512,27 @@
           "$ref" : "#/definitions/Product"
         }
       }
+    }
+  },
+  "parameters" : {
+    "username" : {
+      "name" : "username",
+      "in" : "path",
+      "required" : true,
+      "description" : "The person's username",
+      "type" : "string"
+    },
+    "pageSize" : {
+      "name" : "pageSize",
+      "in" : "query",
+      "description" : "Number of persons returned",
+      "type" : "integer"
+    },
+    "pageNumber" : {
+      "name" : "pageNumber",
+      "in" : "query",
+      "description" : "Page number",
+      "type" : "integer"
     }
   },
   "externalDocs" : {
