@@ -31,36 +31,6 @@
     }
   } ],
   "paths" : {
-    "/mall/product/detail/{productid}" : {
-      "get" : {
-        "tags" : [ "商品" ],
-        "summary" : "获取商品详情",
-        "description" : "获取商品详情情况",
-        "operationId" : "findPetsByStatus",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "productid",
-          "in" : "path",
-          "description" : "商品ID过滤.",
-          "required" : true,
-          "type" : "integer"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/ProductDetail"
-            }
-          },
-          "400" : {
-            "description" : "Invalid status value"
-          }
-        },
-        "security" : [ {
-          "petstore_auth" : [ "write:pets", "read:pets" ]
-        } ]
-      }
-    },
     "/mall/order" : {
       "post" : {
         "tags" : [ "订单" ],
@@ -82,43 +52,6 @@
             "description" : "操作完成.",
             "schema" : {
               "$ref" : "#/definitions/OrderApiResponse"
-            }
-          },
-          "400" : {
-            "description" : "订单错误.错误原因."
-          }
-        },
-        "security" : [ {
-          "petstore_auth" : [ "write:pets", "read:pets" ]
-        } ]
-      }
-    },
-    "/mall/finance" : {
-      "post" : {
-        "tags" : [ "资金" ],
-        "summary" : "资金列表",
-        "description" : "获取资金列表",
-        "operationId" : "getFinanceList",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "body",
-          "in" : "body",
-          "description" : "资金",
-          "required" : true,
-          "schema" : [ {
-            "$ref" : "#/parameters/pageSize"
-          }, {
-            "$ref" : "#/parameters/pageNumber"
-          } ]
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "成功返回",
-            "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/FinanceList"
-              }
             }
           },
           "400" : {
@@ -512,27 +445,6 @@
           "$ref" : "#/definitions/Product"
         }
       }
-    }
-  },
-  "parameters" : {
-    "username" : {
-      "name" : "username",
-      "in" : "path",
-      "required" : true,
-      "description" : "The person's username",
-      "type" : "string"
-    },
-    "pageSize" : {
-      "name" : "pageSize",
-      "in" : "body",
-      "description" : "Number of persons returned",
-      "type" : "integer"
-    },
-    "pageNumber" : {
-      "name" : "pageNumber",
-      "in" : "body",
-      "description" : "Page number",
-      "type" : "integer"
     }
   },
   "externalDocs" : {
