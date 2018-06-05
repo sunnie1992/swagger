@@ -524,13 +524,13 @@
     },
     "pageSize" : {
       "name" : "pageSize",
-      "in" : "query",
+      "in" : "body",
       "description" : "Number of persons returned",
       "type" : "integer"
     },
     "pageNumber" : {
       "name" : "pageNumber",
-      "in" : "query",
+      "in" : "body",
       "description" : "Page number",
       "type" : "integer"
     }
