@@ -42,10 +42,7 @@
           "200" : {
             "description" : "success",
             "schema" : {
-              "type" : "object",
-              "items" : {
-                "$ref" : "#/definitions/SupplierInfoApiResponse"
-              }
+              "$ref" : "#/definitions/SupplierInfoApiResponse"
             }
           },
           "400" : {
