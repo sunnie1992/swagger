@@ -501,7 +501,7 @@
           "type" : "string"
         },
         "createTime" : {
-          "type" : "string"
+          "type" : "date-time"
         },
         "email" : {
           "type" : "string"
