@@ -48,10 +48,7 @@
           "400" : {
             "description" : "Invalid status value"
           }
-        },
-        "security" : [ {
-          "petstore_auth" : [ "write:pets", "read:pets" ]
-        } ]
+        }
       }
     },
     "/finance/list" : {
@@ -474,16 +471,13 @@
       "properties" : {
         "id" : {
           "type" : "integer",
-          "format" : "int64",
-          "description" : "供应商id"
+          "format" : "int64"
         },
         "uName" : {
-          "type" : "string",
-          "description" : "供应商账号名称"
+          "type" : "string"
         },
         "uMobile" : {
-          "type" : "string",
-          "description" : "供应商账"
+          "type" : "string"
         },
         "createTime" : {
           "type" : "string"
