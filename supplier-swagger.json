@@ -479,7 +479,7 @@
         "data" : {
           "$ref" : "#/definitions/SupplierInfo"
         },
-        "msg" : {
+        "info" : {
           "type" : "string"
         }
       }
