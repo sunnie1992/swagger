@@ -42,7 +42,10 @@
           "200" : {
             "description" : "success",
             "schema" : {
-              "$ref" : "#/definitions/SupplierInfo"
+              "type" : "object",
+              "items" : {
+                "$ref" : "#/definitions/SupplierInfoApiResponse"
+              }
             }
           },
           "400" : {
@@ -463,6 +466,21 @@
         },
         "products" : {
           "$ref" : "#/definitions/Product"
+        }
+      }
+    },
+    "SupplierInfoApiResponse" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "data" : {
+          "$ref" : "#/definitions/SupplierInfo"
+        },
+        "msg" : {
+          "type" : "string"
         }
       }
     },
