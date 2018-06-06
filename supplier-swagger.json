@@ -502,7 +502,8 @@
         },
         "createTime" : {
           "type" : "string",
-          "format" : "date-time"
+          "format" : "date-time",
+          "description" : "创建时间"
         },
         "email" : {
           "type" : "string"
