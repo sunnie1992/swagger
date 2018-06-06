@@ -4,9 +4,9 @@
     "description" : "供应商后台API\n",
     "version" : "1.0.0",
     "title" : "supplier-admin",
-    "termsOfService" : "http://swagger.io/terms/",
+    "termsOfService" : "https://github.com/sunnie1992",
     "contact" : {
-      "email" : "llc_xyz@qq.com"
+      "email" : "406803045@qq.com"
     },
     "license" : {
       "name" : "Apache 2.0",
@@ -474,30 +474,34 @@
       "properties" : {
         "id" : {
           "type" : "integer",
-          "format" : "int64"
+          "format" : "int64",
+          "description" : "供应商id"
         },
-        "username" : {
-          "type" : "string"
+        "uName" : {
+          "type" : "string",
+          "description" : "供应商账号名称"
         },
-        "firstName" : {
-          "type" : "string"
+        "uMobile" : {
+          "type" : "string",
+          "description" : "供应商账"
         },
-        "lastName" : {
+        "createTime" : {
           "type" : "string"
         },
         "email" : {
           "type" : "string"
         },
-        "password" : {
+        "supplierName" : {
           "type" : "string"
         },
-        "phone" : {
+        "provinceName" : {
           "type" : "string"
         },
-        "userStatus" : {
-          "type" : "integer",
-          "format" : "int32",
-          "description" : "User Status"
+        "cityName" : {
+          "type" : "string"
+        },
+        "areaName" : {
+          "type" : "string"
         }
       }
     }
